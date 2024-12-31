@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Navbar = () => {
   return (
-    <div className="Navbar border border-red-900 rounded-lg p-5 bg-green-700 flex items-center justify-between">
+    <div className="Navbar border border-red-900 my-10 mx-3 rounded-3xl p-5 bg-white flex items-center justify-between">
       <div className="logo&clickables flex items-center gap-7">
         <div className="svg ">
           <Image
@@ -23,10 +23,10 @@ const Navbar = () => {
         </div>
       </div>
       <div className="buttons flex gap-5">
-        <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
+        <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-2xl">
           Log-in
         </button>
-        <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-2xl">
           Sign up Free
         </button>
       </div>
