@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Navbar = () => {
   return (
-    <div className="Navbar border border-red-900 my-12 mx-7 rounded-full p-5 bg-white flex items-center justify-between">
+    <nav className="Navbar border border-red-900 my-12 mx-7 rounded-full p-5 bg-white flex items-center justify-between">
       <div className="logo&clickables flex items-center">
         <div className="svg mx-2">
           <Image
@@ -30,7 +30,7 @@ const Navbar = () => {
           Sign up Free
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 
