@@ -35,7 +35,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div>dnfnn</div>
+        <div className="imageofmobile mt-12 ml-8"><Image alt="no image"width={522} height={482} src="/mobile.png"></Image></div>
       </section>
       <section className="bg-[#e9c0e9] min-h-[100vh]"></section>
     </main>
