@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
-        <div>
+        <div className="text&all">
           <div className="flex justify-center mt-11 flex-col ml-[5vw] gap-3 font-poppins">
             <p className="text-yellow-300 font-bold text-6xl">
               Everything you{" "}
@@ -19,6 +19,20 @@ export default function Home() {
               curate, and sell from your Instagram, TikTok, Twitter, YouTube,
               and beyond—effortlessly.
             </p>
+            <div className="Input&Button ">
+              <input
+                className="rounded-xl p-3 mr-6"
+                type="text"
+                value=""
+                placeholder="Abcjdcjdn"
+              />
+              <button
+                className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 px-3 rounded-full"
+                disabled=""
+              >
+                Claim Your Palmlink
+              </button>
+            </div>
           </div>
         </div>
         <div>dnfnn</div>
