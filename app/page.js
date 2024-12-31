@@ -5,19 +5,19 @@ export default function Home() {
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
         <div>
-          <div className="flex justify-center mt-14 flex-col ml-[5vw] gap-3 font-poppins">
+          <div className="flex justify-center mt-11 flex-col ml-[5vw] gap-3 font-poppins">
             <p className="text-yellow-300 font-bold text-6xl">
               Everything you{" "}
             </p>
-            <p className="text-yellow-300 font-bold text-6xl">
+            <p className="text-yellow-300 font-bold text-5xl">
               are. In one simple,
             </p>
-            <p className="text-yellow-300 font-bold text-6xl"> link in bio.</p>
-            <p className="text-yellow-300 text-xl my-4">
-              Join 50M+ people using Linktree for their link in bio. One link to
-              help you share everything you create, curate and sell from your
-              Instagram, TikTok, Twitter, YouTube and other social media
-              profiles.
+            <p className="text-yellow-300 font-bold text-5xl"> link in bio.</p>
+            <p className="text-yellow-200 text-xl my-4 ">
+              Join millions of users already simplifying their online presence
+              with just one link on Palmlink. Share everything you create,
+              curate, and sell from your Instagram, TikTok, Twitter, YouTube,
+              and beyond—effortlessly.
             </p>
           </div>
         </div>
