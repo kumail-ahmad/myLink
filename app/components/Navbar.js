@@ -13,12 +13,12 @@ const Navbar = () => {
           ></Image>
         </div>
         <div className="clickables ">
-          <ul className="clickables flex flex-row gap-5">
-            <li>Templates</li>
-            <li>Templates</li>
-            <li>Templates</li>
-            <li>Templates</li>
-            <li>Templates</li>
+          <ul className="clickables  flex flex-row gap-5">
+            <li className="hover:bg-gray-600 p-2 rounded">Templates</li>
+            <li className="hover:bg-gray-600 p-2 rounded">Templates</li>
+            <li className="hover:bg-gray-600 p-2 rounded">Templates</li>
+            <li className="hover:bg-gray-600 p-2 rounded">Templates</li>
+            <li className="hover:bg-gray-600 p-2 rounded">Templates</li>
           </ul>
         </div>
       </div>
