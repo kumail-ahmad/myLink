@@ -12,6 +12,9 @@ export default {
         foreground: "var(--foreground)",
         customGreen: "#254F1A",
       },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
