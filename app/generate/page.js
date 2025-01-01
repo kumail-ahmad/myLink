@@ -7,6 +7,8 @@ const Generate = () => {
   const [link, setlink] = useState("");
   const [linktext, setlinktext] = useState("");
   const [handle, sethandle] = useState("");
+  const [pic, setpic] = useState("");
+
   const addLink = async (text, link, handle) => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -40,7 +42,7 @@ const Generate = () => {
           className="border border-purple-400 rounded-full p-2 w-1/3 ml-4"
           type="text"
           placeholder="Enter Link text"
-          onclick={(e) => {
+          onChange={(e) => {
             sethandle(e.target.value);
           }}
           value={handle || ""}
@@ -51,19 +53,19 @@ const Generate = () => {
             className="border border-purple-400 rounded-full p-2 w-1/3 mr-2"
             type="text"
             placeholder="Enter Link text"
-            onclick={(e) => {
+            onChange={(e) => {
               setlink(e.target.value);
             }}
-            value={handle || ""}
+            value={link || ""}
           />
           <input
             className="border border-purple-400 rounded-full p-2 w-1/3"
             type="text"
             placeholder="Enter Link Url"
-            onclick={(e) => {
+            onChange={(e) => {
               setlinktext(e.target.value);
             }}
-            value={handle || ""}
+            value={linktext || ""}
           />
           <button
             className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
@@ -81,10 +83,10 @@ const Generate = () => {
           type="text"
           alt=""
           className="border border-purple-400 rounded-full p-2  ml-4 w-1/3"
-          onclick={(e) => {
-            sethandle(e.target.value);
+          onChange={(e) => {
+            setpic(e.target.value);
           }}
-          value={handle || ""}
+          value={pic || ""}
         />
         <button
           className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"
