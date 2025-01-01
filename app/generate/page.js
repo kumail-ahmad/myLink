@@ -6,20 +6,35 @@ const Generate = () => {
       <div className="div.picture  ml-44">
         <Image alt="image" src="/generate.png" width={320} height={320} />
       </div>
-      <div className="inputs flex flex-col justify-center items-center gap-2">
+      <div className="inputs flex flex-col  justify-center gap-2">
         <p className="font-poppins font-semibold text-2xl">Create your link</p>
+        <h1> Step 1: Name your Handle</h1>
         <input
-          className="border border-purple-400 rounded-full p-3"
+          className="border border-purple-400 rounded-full p-2 w-1/3 ml-4"
           type="text"
           placeholder="Enter Link text"
         />
+        <h1> Step 2: Add your Links</h1>
+        <div className="addlinks ml-4">
+          <input
+            className="border border-purple-400 rounded-full p-2 w-1/3"
+            type="text"
+            placeholder="Enter Link text"
+          />
+          <input
+            className="border border-purple-400 rounded-full p-2 w-1/3"
+            type="text"
+            placeholder="Enter Link Url"
+          />
+        </div>
+        <h1> Step 3: Add Your Display Picture and Submit</h1>
         <input
-          className="border border-purple-400 rounded-full p-3"
           type="text"
-          placeholder="Enter Link Url"
+          alt=""
+          className="border border-purple-400 rounded-full p-2 w-[97%] ml-4"
         />
         <button
-          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full"
+          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4"
           type="submit"
         >
           Submit
