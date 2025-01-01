@@ -1,5 +1,6 @@
 import Link from "next/link";
 import clientPromise from "../lib/mongodb";
+import { notFound } from "next/navigation";
 
 export default async function Page({ params }) {
   const handle = (await params).handle;
