@@ -2,8 +2,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
+import { useSearchParams } from "next/navigation";
 
 const Generate = () => {
+  const searchParams = useSearchParams;
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
   const [handle, setHandle] = useState("");
   const [pic, setPic] = useState("");
