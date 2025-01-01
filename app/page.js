@@ -1,8 +1,9 @@
 import Image from "next/image";
-
+import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <main>
+      
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
         <div className="text&all mx-16">
           <div className="flex justify-center mt-11 flex-col ml-[5vw] gap-3 font-poppins">
