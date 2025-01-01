@@ -5,19 +5,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const [text, setText] = useState("");
+  const router = useRouter();
 
-
-const router =useRouter()
+  
   const createTree = () => {
-    let link;
-    if(text.startsWith("palm.ee/")){
-      link=text.split("/")[1]
-      router.push(`/${link}`)
-    }
+    router.push(`/generate?handle=${text}`);
   };
-
-
-  const [text, setText] = useState("palmtr.ee/");
 
   return (
     <main>
