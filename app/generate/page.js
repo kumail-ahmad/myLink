@@ -7,9 +7,10 @@ const Generate = () => {
         <Image alt="image" src="/generate.png" width={320} height={320} />
       </div>
       <div className="inputs flex flex-col justify-center items-center gap-2">
-        <p>Create your link</p>
-        <input className="focus:border-purple-400 rounded-full p-3" type="text" placeholder="Enter Link text" />
-        <input className="focus:border-purple-400 rounded-full p-3" type="text" placeholder="Enter Link " />
+        <p className="font-poppins font-semibold">Create your link</p>
+        <input className="border border-purple-400 rounded-full p-3" type="text" placeholder="Enter Link text" />
+        <input className="border border-purple-400 rounded-full p-3" type="text" placeholder="Enter Link " />
+        <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full" type="submit">Submit</button>
       </div>
     </div>
   );
