@@ -2,7 +2,7 @@ import React from 'react'
 
 const Generate = () => {
   return (
-    <div>
+    <div className="bg-pink-600 ">
       jhvbhvbh
     </div>
   )

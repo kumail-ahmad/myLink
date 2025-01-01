@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favi.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-poppins bg-customGreen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-poppins`}
       >
         <Navbar />
         {children}
