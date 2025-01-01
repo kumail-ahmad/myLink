@@ -5,9 +5,9 @@ import { ToastContainer, toast } from "react-toastify";
 import { useSearchParams } from "next/navigation";
 
 const Generate = () => {
-  const searchParams = useSearchParams;
+  const searchParams = useSearchParams();
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
-  const [handle, setHandle] = useState("");
+  const [handle, setHandle] = useState(searchParams.get('handle') );
   const [pic, setPic] = useState("");
 
   const handleChange = (index, field, value) => {
