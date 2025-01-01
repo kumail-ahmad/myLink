@@ -30,7 +30,7 @@ const Navbar = () => {
                 <li className="hover:bg-gray-300 p-2 rounded"> Create</li>
               </Link>
 
-              <Link href="mubrek"><li className="hover:bg-gray-300 p-2 rounded">Templates</li></Link>
+              <Link href="withphoto"><li className="hover:bg-gray-300 p-2 rounded">slug</li></Link>
               <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
               <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
             </ul>
