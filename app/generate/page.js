@@ -40,10 +40,10 @@ const Generate = () => {
         <input
           type="text"
           alt=""
-          className="border border-purple-400 rounded-full p-2 w-[100vh] ml-4"
+          className="border border-purple-400 rounded-full p-2  ml-4 w-1/3"
         />
         <button
-          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4"
+          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"
           type="submit"
         >
           Submit
