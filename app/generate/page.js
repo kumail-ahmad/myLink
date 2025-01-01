@@ -26,7 +26,7 @@ const Generate = () => {
       redirect: "follow",
     };
 
-    const r = await fetch("localhost:3000/api/add", requestOptions);
+    const r = await fetch("http://localhost:3000/api/add", requestOptions);
     const result = await r.json();
     toast(result.message);
   };
@@ -69,7 +69,7 @@ const Generate = () => {
           />
           <button
             className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
-            type="submit"
+            type="submit" onClick={() => addLink(linktext, link, handle)}
           >
             Submit
           </button>
