@@ -14,7 +14,7 @@ export default function Home() {
             </p>
             <p className="text-yellow-300 font-bold text-5xl"> link in bio.</p>
             <p className="text-yellow-200 text-xl mt-4 ">
-              Join millions of users already simplifying their online presence {" "}
+              Join millions of users already simplifying their online presence{" "}
             </p>
             <p className="text-yellow-200 text-xl  ">with just </p>
             <p className="text-yellow-200 text-xl  ">one link on Palmlink.</p>
@@ -34,7 +34,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="imageofmobile mt-12 ml-8">
+        <div className="imageofmobile mt-4 ml-8">
           <Image
             alt="no image"
             width={522}

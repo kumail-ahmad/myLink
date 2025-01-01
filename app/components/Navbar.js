@@ -25,7 +25,7 @@ const Navbar = () => {
       </div>
       <div className="buttons flex gap-5">
         <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-5 rounded-full">
-          Log-in
+          Log In
         </button>
         <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full">
           Sign up Free
