@@ -47,7 +47,9 @@ const Generate = () => {
       requestOptions
     );
     const result = await response.json();
-    toast(result.message);
+    if (result.success) {
+      toast(result.message);
+    }
   };
 
   return (
