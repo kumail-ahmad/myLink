@@ -2,8 +2,21 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
+
 export default function Home() {
-  const createTree = () => {};
+
+
+const router =useRouter()
+  const createTree = () => {
+    let link;
+    if(text.startsWith("palm.ee/")){
+      link=text.split("/")[1]
+      router.push(`/${link}`)
+    }
+  };
+
+
   const [text, setText] = useState("palmtr.ee/");
 
   return (
@@ -28,8 +41,8 @@ export default function Home() {
                 className="rounded-xl p-3 mr-6"
                 type="text"
                 value={text}
-                onChange={() => setText(e.target.value)}
-                placeholder="Abcjdcjdn"
+                onChange={(e) => setText(e.target.value)}
+                placeholder="Enter your handle"
               />
               <button
                 className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 px-3 rounded-full"
