@@ -48,7 +48,12 @@ const Generate = () => {
     );
     const result = await response.json();
     if (result.success) {
-      toast(result.message);
+      toast.success(result.message);
+      setLinks([{ link: "", linktext: "" }]);
+      setPic("");
+      setHandle("");
+    } else {
+      toast.error(result.message);
     }
   };
 
@@ -109,7 +114,8 @@ const Generate = () => {
         />
 
         <button
-          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"
+          disabled={pic === "" || handle === ""}
+          className="disabled:bg-purple-400 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"
           onClick={submitLinks}
         >
           Submit
