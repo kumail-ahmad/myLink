@@ -35,16 +35,19 @@ const Generate = () => {
     });
 
     console.log(raw);
-    // Uncomment and configure the fetch request if API integration is required
-    // const requestOptions = {
-    //   method: "POST",
-    //   headers: myHeaders,
-    //   body: raw,
-    //   redirect: "follow",
-    // };
-    // const response = await fetch("http://localhost:3000/api/add", requestOptions);
-    // const result = await response.json();
-    // toast(result.message);
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+    const response = await fetch(
+      "http://localhost:3000/api/add",
+      requestOptions
+    );
+    const result = await response.json();
+    toast(result.message);
   };
 
   return (
@@ -67,7 +70,14 @@ const Generate = () => {
 
         <h1 className="font-semibold">Step 2: Add your Links</h1>
         {links.map((item, index) => (
-          <div key={index} className="addlinks ml-4">
+          <div key={index} className="addlinks  ml-4">
+            <input
+              className="border border-purple-400 rounded-full p-2 w-1/3"
+              type="text"
+              placeholder="Enter Link URL"
+              onChange={(e) => handleChange(index, "link", e.target.value)}
+              value={item.link || ""}
+            />
             <input
               className="border border-purple-400 rounded-full p-2 w-1/3 mr-2"
               type="text"
@@ -75,24 +85,19 @@ const Generate = () => {
               onChange={(e) => handleChange(index, "linktext", e.target.value)}
               value={item.linktext}
             />
-            <input
-              className="border border-purple-400 rounded-full p-2 w-1/3"
-              type="text"
-              placeholder="Enter Link URL"
-              onChange={(e) => handleChange(index, "link", e.target.value)}
-              value={item.link}
-            />
           </div>
         ))}
 
         <button
-          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
+          className="bg-purple-500 hover:bg-purple-600 text-white w-1/3 font-bold py-2 px-4 rounded-full ml-4"
           onClick={addLink}
         >
-          + Add Link
+          +Add Link
         </button>
 
-        <h1 className="font-semibold">Step 3: Add Your Display Picture and Submit</h1>
+        <h1 className="font-semibold">
+          Step 3: Add Your Display Picture and Submit
+        </h1>
         <input
           className="border border-purple-400 rounded-full p-2 ml-4 w-1/3"
           type="text"

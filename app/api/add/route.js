@@ -12,7 +12,7 @@ export async function POST(request) {
   return Response.json({
     success: true,
     error: false,
-    message: "Added",
+    message: "Your palmlink has been created !!!",
     result: result,
   });
 }
