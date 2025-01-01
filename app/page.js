@@ -3,10 +3,9 @@ import Navbar from "./components/Navbar";
 export default function Home() {
   return (
     <main>
-      
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
         <div className="text&all mx-16">
-          <div className="flex justify-center mt-11 flex-col ml-[5vw] gap-3 font-poppins">
+          <div className="flex justify-center mt-40 flex-col ml-[5vw] gap-3 font-poppins">
             <p className="text-yellow-300 font-bold text-6xl">
               Everything you{" "}
             </p>
@@ -35,7 +34,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="imageofmobile mt-4 ml-8">
+        <div className="imageofmobile mt-32 ml-8">
           <Image
             alt="no image"
             width={522}

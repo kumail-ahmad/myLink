@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 const Navbar = () => {
   return (
-    <div className="container ">
-      <nav className="Navbar border border-black mt-12 mx-32 rounded-full p-5 bg-white flex items-center justify-between ">
+    <div className="container">
+      <nav className="bg-white w-[80vw] flex justify-between fixed top-10 right-[10vw] rounded-full p-5 px-7 ">
         <div className="logo&clickables flex items-center gap-3">
           <div className="svg mx-2 flex items-center ">
             <h3 className="font-bold text-2xl">Palmlink</h3>
@@ -16,8 +17,13 @@ const Navbar = () => {
           </div>
           <div className="clickables ">
             <ul className="clickables  flex flex-row gap-2">
-              <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
-              <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
+              <Link href="/">
+                <li className="hover:bg-gray-300 p-2 rounded"> Home</li>
+              </Link>
+              <Link href="/generate">
+                <li className="hover:bg-gray-300 p-2 rounded"> Create</li>
+              </Link>
+
               <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
               <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
               <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
