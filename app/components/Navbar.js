@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Navbar = () => {
   return (
-    <nav className="Navbar border border-black mt-12 mx-7 rounded-full p-5 bg-white flex items-center justify-between ">
+    <nav className="Navbar border border-black mt-12 mx-32 rounded-full p-5 bg-white flex items-center justify-between ">
       <div className="logo&clickables flex items-center gap-3">
         <div className="svg mx-2 flex items-center ">
             <h3 className="font-bold text-2xl">Palmlink</h3>

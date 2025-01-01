@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
-        <div className="text&all">
+        <div className="text&all mx-16">
           <div className="flex justify-center mt-11 flex-col ml-[5vw] gap-3 font-poppins">
             <p className="text-yellow-300 font-bold text-6xl">
               Everything you{" "}
@@ -13,12 +13,11 @@ export default function Home() {
               are. In one simple,
             </p>
             <p className="text-yellow-300 font-bold text-5xl"> link in bio.</p>
-            <p className="text-yellow-200 text-xl my-4 ">
-              Join millions of users already simplifying their online presence
-              with just one link on Palmlink. Share everything you create,
-              curate, and sell from your Instagram, TikTok, Twitter, YouTube,
-              and beyond—effortlessly.
+            <p className="text-yellow-200 text-xl mt-4 ">
+              Join millions of users already simplifying their online presence {" "}
             </p>
+            <p className="text-yellow-200 text-xl  ">with just </p>
+            <p className="text-yellow-200 text-xl  ">one link on Palmlink.</p>
             <div className="Input&Button ">
               <input
                 className="rounded-xl p-3 mr-6"
