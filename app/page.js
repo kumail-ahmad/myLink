@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 export default function Home() {
+  const createTree=() => {
+    
+  }
+  
   return (
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
@@ -27,7 +31,7 @@ export default function Home() {
               />
               <button
                 className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 px-3 rounded-full"
-                disabled=""
+                disabled="" onClick={()=>createTree()}
               >
                 Claim Your Palmlink
               </button>
