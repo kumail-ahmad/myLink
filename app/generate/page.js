@@ -7,8 +7,9 @@ import { useSearchParams } from "next/navigation";
 const Generate = () => {
   const searchParams = useSearchParams();
   const [links, setLinks] = useState([{ link: "", linktext: "" }]);
-  const [handle, setHandle] = useState(searchParams.get('handle') );
+  const [handle, setHandle] = useState(searchParams.get("handle"));
   const [pic, setPic] = useState("");
+  const [desc, setDesc] = useState("");
 
   const handleChange = (index, field, value) => {
     setLinks((initialLinks) => {
@@ -34,6 +35,7 @@ const Generate = () => {
       links,
       handle,
       pic,
+      desc,
     });
 
     console.log(raw);
@@ -54,6 +56,7 @@ const Generate = () => {
       setLinks([{ link: "", linktext: "" }]);
       setPic("");
       setHandle("");
+      setDesc("");
     } else {
       toast.error(result.message);
     }
@@ -81,18 +84,18 @@ const Generate = () => {
         {links.map((item, index) => (
           <div key={index} className="addlinks  ml-4">
             <input
-              className="border border-purple-400 rounded-full p-2 w-1/3"
-              type="text"
-              placeholder="Enter Link URL"
-              onChange={(e) => handleChange(index, "link", e.target.value)}
-              value={item.link || ""}
-            />
-            <input
               className="border border-purple-400 rounded-full p-2 w-1/3 mr-2"
               type="text"
               placeholder="Enter Link text"
               onChange={(e) => handleChange(index, "linktext", e.target.value)}
               value={item.linktext}
+            />
+            <input
+              className="border border-purple-400 rounded-full p-2 w-1/3"
+              type="text"
+              placeholder="Enter Link URL"
+              onChange={(e) => handleChange(index, "link", e.target.value)}
+              value={item.link || ""}
             />
           </div>
         ))}
@@ -105,16 +108,24 @@ const Generate = () => {
         </button>
 
         <h1 className="font-semibold">
-          Step 3: Add Your Display Picture and Submit
+          Step 3: Add Your Display Picture and Description
         </h1>
-        <input
-          className="border border-purple-400 rounded-full p-2 ml-4 w-1/3"
-          type="text"
-          placeholder="Enter image URL"
-          onChange={(e) => setPic(e.target.value)}
-          value={pic}
-        />
-
+        <div className="img&desc">
+          <input
+            className="border border-purple-400 rounded-full p-2 ml-4 w-1/3"
+            type="text"
+            placeholder="Enter image URL"
+            onChange={(e) => setPic(e.target.value)}
+            value={pic}
+          />
+          <input
+            className="border border-purple-400 rounded-full p-2 ml-4 w-1/3"
+            type="text"
+            placeholder="Enter description"
+            onChange={(e) => setDesc(e.target.value)}
+            value={desc}
+          />
+        </div>
         <button
           disabled={pic === "" || handle === ""}
           className="disabled:bg-purple-400 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"

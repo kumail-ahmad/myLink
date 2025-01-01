@@ -11,6 +11,11 @@ export default async function Page({ params }) {
   // If the handle is alreay taken, you cannot create a palmlink with that handle
   const item = await collection.findOne({ handle: handle });
 
+if(!item){
+  return notFound()
+}
+
+
   const item2 = {
     _id: {
       $oid: "6775664822a9a0f2f25bab63",
