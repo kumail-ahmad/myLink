@@ -24,7 +24,7 @@ export default async function Page({ params }) {
         width={170}
         className="rounded-full border-4 border-white shadow-lg"
       />
-      <span className="font-bold">@{item.handle}</span>
+      <span className="font-bold text-xl">@{item.handle}</span>
       </div>
     </div>
   );
