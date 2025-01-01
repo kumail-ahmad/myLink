@@ -4,16 +4,17 @@ export default async function Page({ params }) {
   const handle = (await params).handle;
   const item={
     
+    
       "_id": {
-        "$oid": "677554c622a9a0f2f25bab61"
+        "$oid": "6775664822a9a0f2f25bab63"
       },
       "links": [
         {
-          "link": "localhost:3000/generate",
-          "linktext": "local"
+          "link": "https://github.com/kumail-ahmad",
+          "linktext": "Github"
         }
       ],
-      "handle": "mubrek",
+      "handle": "kumail-ahmad",
       "pic": "https://avatars.githubusercontent.com/u/144327213?v=4"
     }
   
@@ -26,13 +27,13 @@ export default async function Page({ params }) {
         width={170}
         className="rounded-full border-4 border-white shadow-lg"
       />
-      <span className="font-bold text-xl">@{item.handle}</span>
+      <span className="font-bold text-xl font-serif">@{item.handle}</span>
       <div className="links">
         {item.links.map((item,index)=>{
-          return <div className="py-2 px-2 bg-white rounded-md my-3 shadow-lg" key={index}>
-           <Link href={item.link}> {item.linktext}</Link>
+          return <Link key={index} href={item.link}> <div className="py-4 px-2 min-w-96 bg-white  my-3 shadow-lg  text-center rounded-full " >
+           {item.linktext}
             
-          </div>
+          </div></Link>
         })}
       </div>
       </div>
