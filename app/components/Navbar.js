@@ -3,8 +3,8 @@ import Image from "next/image";
 const Navbar = () => {
   return (
     <nav className="Navbar border border-black mt-12 mx-7 rounded-full p-5 bg-white flex items-center justify-between ">
-      <div className="logo&clickables flex items-center gap-4">
-        <div className="svg mx-2 flex items-center gap-0">
+      <div className="logo&clickables flex items-center gap-3">
+        <div className="svg mx-2 flex items-center ">
             <h3 className="font-bold text-2xl">Palmlink</h3>
           <Image
             alt="Palm"
@@ -14,7 +14,7 @@ const Navbar = () => {
           ></Image>
         </div>
         <div className="clickables ">
-          <ul className="clickables  flex flex-row gap-5">
+          <ul className="clickables  flex flex-row gap-2">
             <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
             <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
             <li className="hover:bg-gray-300 p-2 rounded">Templates</li>

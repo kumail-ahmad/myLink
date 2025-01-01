@@ -35,9 +35,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="imageofmobile mt-12 ml-8"><Image alt="no image"width={522} height={482} src="/mobile.png"></Image></div>
+        <div className="imageofmobile mt-12 ml-8">
+          <Image
+            alt="no image"
+            width={522}
+            height={482}
+            src="/mobile.png"
+          ></Image>
+        </div>
       </section>
-      <section className="bg-[#e9c0e9] min-h-[100vh]"></section>
+      <section className="bg-[#e9c0e9] min-h-[100vh] grid grid-cols-2">
+        <div>devssv</div>
+        <div>devssv</div>
+      </section>
     </main>
   );
 }
