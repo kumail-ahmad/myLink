@@ -3,7 +3,7 @@ import Image from "next/image";
 const Generate = () => {
   return (
     <div className="bg-[#eac1ea] min-h-screen grid grid-cols-2">
-      <div className="div.picture  ml-44">
+      <div className="div.picture  mt-10 ml-44">
         <Image alt="image" src="/generate.png" width={320} height={320} />
       </div>
       <div className="inputs flex flex-col  justify-center gap-2">
@@ -26,6 +26,12 @@ const Generate = () => {
             type="text"
             placeholder="Enter Link Url"
           />
+          <button
+          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
+          type="submit"
+        >
+          Submit
+        </button>
         </div>
         <h1 className="font-semibold">
           {" "}
