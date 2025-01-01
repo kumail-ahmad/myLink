@@ -1,6 +1,31 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { ToastContainer, toast } from "react-toastify";
+
 const Generate = () => {
+  const addLink = async (text, link, handle) => {
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify({
+      Link: link,
+      Linktext: text,
+      handle: handle,
+    });
+
+    const requestOptions = {
+      method: "POST",
+      headers: myHeaders,
+      body: raw,
+      redirect: "follow",
+    };
+
+    fetch("localhost:3000/api/add", requestOptions)
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.error(error));
+  };
   return (
     <div className="bg-[#eac1ea] min-h-screen grid grid-cols-2">
       <div className="div.picture  mt-10 ml-44">
@@ -27,11 +52,13 @@ const Generate = () => {
             placeholder="Enter Link Url"
           />
           <button
-          className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
-          type="submit"
-        >
-          Submit
-        </button>
+            className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
+            type="submit"
+            onClick={notify}
+          >
+            Submit
+          </button>
+          <ToastContainer />
         </div>
         <h1 className="font-semibold">
           {" "}
