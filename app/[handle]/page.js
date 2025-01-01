@@ -16,9 +16,15 @@ export default async function Page({ params }) {
     }
   
   return (
-    <div className="bg-rose-300 min-h-screen justify-center ">
-      <div className="photo items-center">
-        <img width={200}src={item.pic} alt="" />
+    <div className="bg-rose-300 min-h-screen flex justify-center items-center ">
+    <div className="photo flex flex-col justify-center items-center gap-3 transform -translate-y-20">
+      <img
+        src={item.pic}
+        alt="Users picture"
+        width={170}
+        className="rounded-full border-4 border-white shadow-lg"
+      />
+      <span className="font-bold">@{item.handle}</span>
       </div>
     </div>
   );
