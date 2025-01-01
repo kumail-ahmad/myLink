@@ -1,9 +1,12 @@
 "use client";
-import React from "react";
+import { React, useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
 
 const Generate = () => {
+  const [link, setlink] = useState("");
+  const [linktext, setlinktext] = useState("");
+  const [handle, sethandle] = useState("");
   const addLink = async (text, link, handle) => {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -21,10 +24,9 @@ const Generate = () => {
       redirect: "follow",
     };
 
-    fetch("localhost:3000/api/add", requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
-      .catch((error) => console.error(error));
+    const r = await fetch("localhost:3000/api/add", requestOptions);
+    const result = await r.json();
+    toast(result.message);
   };
   return (
     <div className="bg-[#eac1ea] min-h-screen grid grid-cols-2">
@@ -38,6 +40,10 @@ const Generate = () => {
           className="border border-purple-400 rounded-full p-2 w-1/3 ml-4"
           type="text"
           placeholder="Enter Link text"
+          onclick={(e) => {
+            sethandle(e.target.value);
+          }}
+          value={handle || ""}
         />
         <h1 className="font-semibold"> Step 2: Add your Links</h1>
         <div className="addlinks ml-4">
@@ -45,16 +51,23 @@ const Generate = () => {
             className="border border-purple-400 rounded-full p-2 w-1/3 mr-2"
             type="text"
             placeholder="Enter Link text"
+            onclick={(e) => {
+              setlink(e.target.value);
+            }}
+            value={handle || ""}
           />
           <input
             className="border border-purple-400 rounded-full p-2 w-1/3"
             type="text"
             placeholder="Enter Link Url"
+            onclick={(e) => {
+              setlinktext(e.target.value);
+            }}
+            value={handle || ""}
           />
           <button
             className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full ml-4"
             type="submit"
-            onClick={notify}
           >
             Submit
           </button>
@@ -68,6 +81,10 @@ const Generate = () => {
           type="text"
           alt=""
           className="border border-purple-400 rounded-full p-2  ml-4 w-1/3"
+          onclick={(e) => {
+            sethandle(e.target.value);
+          }}
+          value={handle || ""}
         />
         <button
           className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"
