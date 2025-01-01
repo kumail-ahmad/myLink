@@ -14,12 +14,12 @@ export default async function Page({ params }) {
       "handle": "mubrek",
       "pic": "https://avatars.githubusercontent.com/u/144327213?v=4"
     }
-  }
+  
   return (
-    <div className="bg-rose-300 min-h-screen justify-center items-center">
-      <div className="photo">
-        <img src={item.pic} alt="" />
+    <div className="bg-rose-300 min-h-screen justify-center ">
+      <div className="photo items-center">
+        <img width={200}src={item.pic} alt="" />
       </div>
     </div>
   );
-
+}
