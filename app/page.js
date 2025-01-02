@@ -16,30 +16,30 @@ export default function Home() {
   return (
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
-        <div className="text&all mx-16">
+        <div className="text&all mx-3 md:mx-16">
           <div className="flex justify-center mt-48 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
-            <p className="text-yellow-300 font-bold text-3xl md:text-6xl">
+            <p className="text-[#def056] font-bold text-3xl md:text-6xl">
               Everything you{" "}
             </p>
-            <p className="text-yellow-300 font-bold text-2xl md:text-5xl">
+            <p className="text-[#def056] font-bold text-2xl md:text-5xl">
               are. In one simple,
             </p>
-            <p className="text-yellow-300 font-bold text-2xl md:text-5xl"> link in bio.</p>
-            <p className="text-yellow-200 text-xl mt-4 ">
+            <p className="text-[#def056] font-bold text-2xl md:text-5xl"> link in bio.</p>
+            <p className="text-[#def056] md:text-lg mt-4 ">
               Join millions of users already simplifying their online presence{" "}
             </p>
-            <p className="text-yellow-200 text-xl  ">with just </p>
-            <p className="text-yellow-200 text-xl  ">one link on Palmlink.</p>
-            <div className="Input&Button ">
+            <p className="text-[#def056] md:text-xl  ">with just </p>
+            <p className="text-[#def056] md:text-xl  ">one link on Palmlink.</p>
+            <div className="Input&Button   ">
               <input
-                className="rounded-3xl p-3 mr-6 w-full md:w-auto "
+                className="md:rounded-3xl rounded-xl p-3 md:mr-6 w-60 md:w-auto "
                 type="text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="Enter your handle"
               />
               <button
-                className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 px-3 rounded-full"
+                className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-4 px-3 rounded-full mt-3"
                 disabled=""
                 onClick={() => createTree()}
               >
