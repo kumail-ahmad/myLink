@@ -11,10 +11,9 @@ export default async function Page({ params }) {
   // If the handle is alreay taken, you cannot create a palmlink with that handle
   const item = await collection.findOne({ handle: handle });
 
-if(!item){
-  return notFound()
-}
-
+  if (!item) {
+    return notFound();
+  }
 
   const item2 = {
     _id: {
@@ -31,7 +30,7 @@ if(!item){
   };
 
   return (
-    <div className="bg-rose-300 min-h-screen flex justify-center items-start ">
+    <div className="bg-[#e2d1b9] min-h-screen flex justify-center items-start ">
       {item && (
         <div className="photo flex flex-col justify-center items-center gap-3 mt-3 ">
           <img
