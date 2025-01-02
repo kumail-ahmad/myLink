@@ -8,23 +8,23 @@ export default function Home() {
   const [text, setText] = useState("");
   const router = useRouter();
 
-  
+
   const createTree = () => {
     router.push(`/generate?handle=${text}`);
   };
 
   return (
     <main>
-      <section className="bg-customGreen min-h-[100vh] grid grid-cols-2">
+      <section className="bg-customGreen min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
         <div className="text&all mx-16">
-          <div className="flex justify-center mt-40 flex-col ml-[5vw] gap-3 font-poppins">
-            <p className="text-yellow-300 font-bold text-6xl">
+          <div className="flex justify-center mt-20 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
+            <p className="text-yellow-300 font-bold md:text-6xl">
               Everything you{" "}
             </p>
-            <p className="text-yellow-300 font-bold text-5xl">
+            <p className="text-yellow-300 font-bold md:text-5xl">
               are. In one simple,
             </p>
-            <p className="text-yellow-300 font-bold text-5xl"> link in bio.</p>
+            <p className="text-yellow-300 font-bold md:text-5xl"> link in bio.</p>
             <p className="text-yellow-200 text-xl mt-4 ">
               Join millions of users already simplifying their online presence{" "}
             </p>
@@ -32,7 +32,7 @@ export default function Home() {
             <p className="text-yellow-200 text-xl  ">one link on Palmlink.</p>
             <div className="Input&Button ">
               <input
-                className="rounded-xl p-3 mr-6"
+                className="rounded-3xl p-3 mr-6 w-full md:w-auto "
                 type="text"
                 value={text}
                 onChange={(e) => setText(e.target.value)}
@@ -48,12 +48,13 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="imageofmobile mt-32 ml-8">
+        <div className="hidden md:block imageofmobile mt-32 ml-8">
           <Image
             alt="no image"
             width={522}
             height={482}
             src="/mobile.png"
+            className="w-full md:w-auto"
           ></Image>
         </div>
       </section>
