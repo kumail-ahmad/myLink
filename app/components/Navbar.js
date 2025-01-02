@@ -31,15 +31,14 @@ const Navbar = () => {
                 <Link href="/">
                   <li className="hover:bg-gray-300 p-2 rounded"> Home</li>
                 </Link>
+                <Link href="https://github.com/kumail-ahmad/Palm-Link">
+                  <li className="hover:bg-gray-300 p-2 rounded">Github Repo</li>
+                </Link>{" "}
                 <Link href="/myLink">
                   <li className="hover:bg-gray-300 p-2 rounded">
                     {" "}
                     My PalmLink
                   </li>
-                </Link>
-
-                <Link href="https://github.com/kumail-ahmad/Palm-Link">
-                  <li className="hover:bg-gray-300 p-2 rounded">Github Repo</li>
                 </Link>
               </ul>
             </div>
@@ -50,7 +49,7 @@ const Navbar = () => {
             </button>
             <Link href="/generate">
               <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-5">
-                Create  
+                Create
               </button>
             </Link>
           </div>
