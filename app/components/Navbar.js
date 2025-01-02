@@ -14,28 +14,28 @@ const Navbar = () => {
             <div className="svg mx-2 flex items-center ">
               <Link href="/">
                 {" "}
-                <h3 className="font-bold text-2xl">Palmlink</h3>
+                <h3 className="font-bold text-xl md:text-2xl">Palmlink</h3>
               </Link>
               <Link href="/">
                 {" "}
                 <Image
                   alt="Palm"
-                  width={38}
+                  width={42}
                   height={32}
                   src="https://img.freepik.com/free-psd/silhouettes-palm-tree-illustration_23-2151074534.jpg?t=st=1735656768~exp=1735660368~hmac=a84f92a2e12d7935b333a73af55bdf7b2b64f906fe48a43de15642c47a30943f&w=740"
-                ></Image>
+                className="md:block hidden"></Image>
               </Link>
             </div>
             <div className="clickables ">
-              <ul className="clickables   flex flex-row gap-2">
+              <ul className="clickables   flex flex-row gap-1 items-center justify-center">
                 <Link href="/">
-                  <li className="hover:bg-gray-300 p-2 rounded"> Home</li>
+                  <li className="hover:bg-gray-300 p-2 rounded "> Home</li>
                 </Link>
                 <Link href="https://github.com/kumail-ahmad/Palm-Link">
-                  <li className="hover:bg-gray-300 p-2 rounded">Github Repo</li>
+                  <li className="hover:bg-gray-300 md:p-2 rounded">Github Repo</li>
                 </Link>{" "}
                 <Link href="/myLink">
-                  <li className="hover:bg-gray-300 p-2 rounded">
+                  <li className="hover:bg-gray-300 md:p-2 rounded">
                     {" "}
                     My PalmLink
                   </li>
