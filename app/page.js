@@ -18,13 +18,13 @@ export default function Home() {
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
         <div className="text&all mx-3 md:mx-16">
           <div className="flex justify-center mt-48 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
-            <p className="text-[#def056] font-bold text-3xl md:text-6xl">
-              Everything you{" "}
+            <p className="text-[#def056] font-bold text-4xl md:text-6xl">
+              Everything you are. In one{" "}
             </p>
-            <p className="text-[#def056] font-bold text-2xl md:text-5xl">
-              are. In one simple,
+            <p className="text-[#def056] font-bold text-4xl md:text-5xl">
+               simple link in bio,
             </p>
-            <p className="text-[#def056] font-bold text-2xl md:text-5xl"> link in bio.</p>
+            <p className="text-[#def056] font-bold text-4xl md:text-5xl"> </p>
             <p className="text-[#def056] md:text-lg mt-4 ">
               Join millions of users already simplifying their online presence{" "}
             </p>
