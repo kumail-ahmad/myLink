@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       {showNavbar && (
         <div className="container">
-          <nav className="bg-white md:w-[80vw] w-[85vw] flex justify-between fixed top-2 md:top-10 right-[10vw] rounded-full  px-1 p-2 md:p-5 md:px-7 ">
+          <nav className="bg-white md:w-[80vw] w-[85vw] flex justify-between fixed left-7 md:left-36 top-2 md:top-10 right-[10vw] rounded-full  px-1 p-2 md:p-5 md:px-7 ">
             <div className="logo&clickables flex items-center md:gap-3">
               <div className="svg mx-2 flex items-center ">
                 <Link href="/">
