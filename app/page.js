@@ -17,14 +17,14 @@ export default function Home() {
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
         <div className="text&all mx-16">
-          <div className="flex justify-center mt-20 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
-            <p className="text-yellow-300 font-bold md:text-6xl">
+          <div className="flex justify-center mt-48 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
+            <p className="text-yellow-300 font-bold text-3xl md:text-6xl">
               Everything you{" "}
             </p>
-            <p className="text-yellow-300 font-bold md:text-5xl">
+            <p className="text-yellow-300 font-bold text-2xl md:text-5xl">
               are. In one simple,
             </p>
-            <p className="text-yellow-300 font-bold md:text-5xl"> link in bio.</p>
+            <p className="text-yellow-300 font-bold text-2xl md:text-5xl"> link in bio.</p>
             <p className="text-yellow-200 text-xl mt-4 ">
               Join millions of users already simplifying their online presence{" "}
             </p>
