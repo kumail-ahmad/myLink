@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link href={poppins} rel="stylesheet" />
-        <link rel="icon" href="/favi.png" />
+        <link rel="icon" href="/public/favi.png" />
       </head>
 
       <body
