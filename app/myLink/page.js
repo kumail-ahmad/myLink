@@ -1,21 +1,9 @@
 import Link from "next/link";
-import clientPromise from "../lib/mongodb";
-import { notFound } from "next/navigation";
 
-export default async function Page({ params }) {
-  const handle = (await params).handle;
-  const client = await clientPromise;
-  const db = client.db("Palmlink");
-  const collection = db.collection("links");
 
-  // If the handle is alreay taken, you cannot create a palmlink with that handle
-  const item = await collection.findOne({ handle: handle });
-
-  if (!item) {
-    return notFound();
-  }
-
-  const item2 = {
+export default  function Page() {
+ 
+  const item= {
     _id: {
       $oid: "6775664822a9a0f2f25bab63",
     },
@@ -30,9 +18,9 @@ export default async function Page({ params }) {
   };
 
   return (
-    <div className="bg-[#e2d1b9] min-h-screen flex justify-center items-start ">
-      {item && (
-        <div className="photo flex flex-col justify-center items-center gap-3 mt-3 ">
+    <div className="bg-[#e2d1b9] min-h-screen flex justify-center items-start  ">
+     
+        <div className="photo flex flex-col justify-center items-center gap-3 mt-36">
           <img
             src={item.pic}
             alt="Users picture"
@@ -53,7 +41,7 @@ export default async function Page({ params }) {
             })}
           </div>
         </div>
-      )}
+    
     </div>
   );
 }

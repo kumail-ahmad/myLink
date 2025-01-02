@@ -2,63 +2,33 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ToastContainer, toast } from "react-toastify";
-import { useSearchParams } from "next/navigation";
+import "react-toastify/dist/ReactToastify.css";
 
 const Generate = () => {
-  const searchParams = useSearchParams();
-  const [links, setLinks] = useState([{ link: "", linktext: "" }]);
-  const [handle, setHandle] = useState(searchParams.get("handle"));
-  const [pic, setPic] = useState("");
-  const [desc, setDesc] = useState("");
+  const [handleName, setHandleName] = useState("");
+  const [linkText, setLinkText] = useState("");
+  const [linkURL, setLinkURL] = useState("");
+  const [imageURL, setImageURL] = useState("");
+  const [description, setDescription] = useState("");
+  const [links, setLinks] = useState([]);
 
-  const handleChange = (index, field, value) => {
-    setLinks((initialLinks) => {
-      return initialLinks.map((item, i) => {
-        if (i === index) {
-          return { ...item, [field]: value };
-        } else {
-          return item;
-        }
-      });
-    });
-  };
-
-  const addLink = () => {
-    setLinks([...links, { link: "", linktext: "" }]);
-  };
-
-  const submitLinks = async () => {
-    const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    const raw = JSON.stringify({
-      links,
-      handle,
-      pic,
-      desc,
-    });
-
-    console.log(raw);
-
-    const requestOptions = {
-      method: "POST",
-      headers: myHeaders,
-      body: raw,
-      redirect: "follow",
-    };
-    const response = await fetch(
-      "http://localhost:3000/api/add",
-      requestOptions
-    );
-    const result = await response.json();
-    if (result.success) {
-      toast.success(result.message);
-      setLinks([{ link: "", linktext: "" }]);
-      setPic("");
-      setHandle("");
-      setDesc("");
+  const handleAddLink = () => {
+    if (linkText && linkURL) {
+      setLinks([...links, { text: linkText, url: linkURL }]);
+      setLinkText("");
+      setLinkURL("");
+      toast.success("Link added successfully!");
     } else {
-      toast.error(result.message);
+      toast.error("Please provide both link text and URL.");
+    }
+  };
+
+  const handleSubmit = () => {
+    if (handleName && links.length > 0 && imageURL && description) {
+      toast.success("Data submitted successfully!");
+      // Here, you can handle the final submission logic (e.g., API call)
+    } else {
+      toast.error("Please complete all steps before submitting.");
     }
   };
 
@@ -76,33 +46,31 @@ const Generate = () => {
           className="border border-purple-400 rounded-full p-2 w-[77vw] md:w-1/3 ml-4"
           type="text"
           placeholder="Enter your handle"
-          onChange={(e) => setHandle(e.target.value)}
-          value={handle}
+          value={handleName}
+          onChange={(e) => setHandleName(e.target.value)}
         />
 
         <h1 className="font-semibold ml-3">Step 2: Add your Links</h1>
-        {links.map((item, index) => (
-          <div key={index} className="addlinks  ml-4">
-            <input
-              className="border border-purple-400 rounded-full p-2 md:w-1/3 mr-2"
-              type="text"
-              placeholder="Enter Link text"
-              onChange={(e) => handleChange(index, "linktext", e.target.value)}
-              value={item.linktext}
-            />
-            <input
-              className="border border-purple-400 rounded-full p-2 md:w-1/3"
-              type="text"
-              placeholder="Enter Link URL"
-              onChange={(e) => handleChange(index, "link", e.target.value)}
-              value={item.link || ""}
-            />
-          </div>
-        ))}
+        <div className="addlinks ml-4">
+          <input
+            className="border border-purple-400 rounded-full p-2 md:w-1/3 mr-2"
+            type="text"
+            placeholder="Enter Link text"
+            value={linkText}
+            onChange={(e) => setLinkText(e.target.value)}
+          />
+          <input
+            className="border border-purple-400 rounded-full p-2 md:w-1/3"
+            type="text"
+            placeholder="Enter Link URL"
+            value={linkURL}
+            onChange={(e) => setLinkURL(e.target.value)}
+          />
+        </div>
 
         <button
           className="bg-purple-500 hover:bg-purple-600 text-white md:w-1/3 font-bold py-2 px-4 rounded-full ml-4"
-          onClick={addLink}
+          onClick={handleAddLink}
         >
           +Add Link
         </button>
@@ -115,21 +83,25 @@ const Generate = () => {
             className="border border-purple-400 rounded-full p-2 ml-4 md:w-1/3"
             type="text"
             placeholder="Enter image URL"
-            onChange={(e) => setPic(e.target.value)}
-            value={pic}
+            value={imageURL}
+            onChange={(e) => setImageURL(e.target.value)}
           />
           <input
             className="border border-purple-400 rounded-full p-2 ml-4 md:w-1/3"
             type="text"
             placeholder="Enter description"
-            onChange={(e) => setDesc(e.target.value)}
-            value={desc}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </div>
         <button
-          disabled={pic === "" || handle === ""}
-          className="disabled:bg-purple-400 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 md:w-1/3"
-          onClick={submitLinks}
+          disabled={!handleName || links.length === 0 || !imageURL || !description}
+          className={`${
+            !handleName || links.length === 0 || !imageURL || !description
+              ? "bg-purple-400"
+              : "bg-purple-500 hover:bg-purple-600"
+          } text-white font-bold py-3 px-5 rounded-full ml-4 md:w-1/3`}
+          onClick={handleSubmit}
         >
           Submit
         </button>

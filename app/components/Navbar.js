@@ -2,13 +2,13 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 const Navbar = () => {
-  const pathname = usePathname();
-  const showNavbar = ["/", "/generate"].includes(pathname);
+  // const pathname = usePathname();
+  // const showNavbar = ["/", "/generate"].includes(pathname);
   return (
     <>
-      {showNavbar && (
+      
         <div className="container">
           <nav className="bg-white md:w-[80vw] w-[85vw] flex justify-between fixed left-7 md:left-36 top-4 md:top-10 right-[10vw] rounded-full  px-1 p-4 md:p-5 md:px-7 ">
             <div className="logo&clickables flex items-center md:gap-3">
@@ -32,15 +32,14 @@ const Navbar = () => {
                   <Link href="/">
                     <li className="hover:bg-gray-300 p-2 rounded"> Home</li>
                   </Link>
-                  <Link href="/generate">
-                    <li className="hover:bg-gray-300 p-2 rounded"> Create</li>
+                  <Link href="/myLink">
+                    <li className="hover:bg-gray-300 p-2 rounded"> My PalmLink</li>
                   </Link>
 
-                  <Link href="/kumail-ahmad">
-                    <li className="hover:bg-gray-300 p-2 rounded">slug</li>
+                  <Link href="https://github.com/kumail-ahmad/Palm-Link">
+                    <li className="hover:bg-gray-300 p-2 rounded">Github Repo</li>
                   </Link>
-                  <li className="hover:bg-gray-300 p-2 rounded md:block hidden">Templates</li>
-                  <li className="hover:bg-gray-300 p-2 rounded md:block hidden">Templates</li>
+                  
                 </ul>
               </div>
             </div>
@@ -54,7 +53,7 @@ const Navbar = () => {
             </div>
           </nav>
         </div>
-      )}
+      
     </>
   );
 };
