@@ -32,7 +32,7 @@ const Navbar = () => {
                   <li className="hover:bg-gray-300 p-2 rounded "> Home</li>
                 </Link>
                 <Link href="https://github.com/kumail-ahmad/Palm-Link">
-                  <li className="hover:bg-gray-300 md:p-2 rounded">Github Repo</li>
+                  <li className="hover:bg-gray-300 md:p-2 rounded items-center justify-center">Github Repo</li>
                 </Link>{" "}
                 <Link href="/myLink">
                   <li className="hover:bg-gray-300 md:p-2 rounded">

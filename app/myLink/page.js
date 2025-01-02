@@ -9,7 +9,8 @@ export default function Page() {
       {
         link1: "https://github.com/kumail-ahmad",
         linktext1: "Github",
-        link2: "https://linkedin.com/in/kumail-ahmad-a3035b1b",
+        link2:
+          "https://www.linkedin.com/in/kumail-ahmad-a3035b15b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
         linktext2: "LinkedIn",
         link3: "https://vercel.com/kumail-ahmads-projects",
         linktext3: "Vercel",
