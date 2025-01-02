@@ -73,7 +73,7 @@ const Generate = () => {
 
         <h1 className="font-semibold w-60">Step 1: Name your Handle</h1>
         <input
-          className="border border-purple-400 rounded-full p-2 md:w-1/3 ml-4"
+          className="border border-purple-400 rounded-full p-2 w-[77vw] md:w-1/3 ml-4"
           type="text"
           placeholder="Enter your handle"
           onChange={(e) => setHandle(e.target.value)}
