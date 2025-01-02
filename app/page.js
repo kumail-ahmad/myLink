@@ -17,7 +17,7 @@ export default function Home() {
     <main>
       <section className="bg-customGreen min-h-[100vh] grid grid-cols-1 md:grid-cols-2">
         <div className="text&all mx-3 md:mx-16">
-          <div className="flex justify-center mt-48 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
+          <div className="flex justify-center mt-32 md:mt-40 flex-col ml-[5vw] gap-3 font-poppins">
             <p className="text-[#def056] font-bold text-4xl md:text-6xl">
               Everything you are. In one{" "}
             </p>

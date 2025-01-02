@@ -10,7 +10,7 @@ const Navbar = () => {
     <>
       {showNavbar && (
         <div className="container">
-          <nav className="bg-white w-[80vw] flex justify-between fixed top-10 right-[10vw] rounded-full md:p-5 md:px-7 ">
+          <nav className="bg-white w-[80vw] flex justify-between fixed top-2 md:top-10 right-[10vw] rounded-full  md:p-5 md:px-7 ">
             <div className="logo&clickables flex items-center gap-3">
               <div className="svg mx-2 flex items-center ">
                 <Link href="/">
@@ -44,11 +44,11 @@ const Navbar = () => {
                 </ul>
               </div>
             </div>
-            <div className="buttons flex gap-5">
-              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-5 rounded-full">
+            <div className="buttons hidden md:block  gap-5">
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-5 rounded-full ">
                 Log In
               </button>
-              <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full">
+              <button className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-5">
                 Sign up Free
               </button>
             </div>
