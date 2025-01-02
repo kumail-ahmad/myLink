@@ -40,7 +40,7 @@ export default async function Page({ params }) {
             className="rounded-full border-4 border-white shadow-lg"
           />
           <span className="font-bold text-xl font-serif">@{item.handle}</span>
-          <div className="links">
+          <div className="links ">
             {item.links.map((item, index) => {
               return (
                 <Link key={index} href={item.link}>
