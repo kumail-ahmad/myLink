@@ -9,9 +9,9 @@ export default function Page() {
       {
         link1: "https://github.com/kumail-ahmad",
         linktext1: "Github",
-        link2: "https://github.com/kumail-ahmad",
+        link2: "https://linkedin.com/in/kumail-ahmad-a3035b1b",
         linktext2: "LinkedIn",
-        link3: "https://github.com/kumail-ahmad",
+        link3: "https://vercel.com/kumail-ahmads-projects",
         linktext3: "Vercel",
       },
     ],
