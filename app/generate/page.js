@@ -69,9 +69,9 @@ const Generate = () => {
       </div>
 
       <div className="inputs flex flex-col justify-center gap-4 mt-16 md:mt-28">
-        <p className="font-poppins font-semibold text-2xl">Create your link</p>
+        <p className="font-poppins font-semibold text-2xl w-60 ml-3">Create your link</p>
 
-        <h1 className="font-semibold w-60">Step 1: Name your Handle</h1>
+        <h1 className="font-semibold w-60 ml-3">Step 1: Name your Handle</h1>
         <input
           className="border border-purple-400 rounded-full p-2 w-[77vw] md:w-1/3 ml-4"
           type="text"
@@ -80,7 +80,7 @@ const Generate = () => {
           value={handle}
         />
 
-        <h1 className="font-semibold">Step 2: Add your Links</h1>
+        <h1 className="font-semibold ml-3">Step 2: Add your Links</h1>
         {links.map((item, index) => (
           <div key={index} className="addlinks  ml-4">
             <input
@@ -107,7 +107,7 @@ const Generate = () => {
           +Add Link
         </button>
 
-        <h1 className="font-semibold w-60">
+        <h1 className="font-semibold w-60 ml-3">
           Step 3: Add Your Display Picture and Description
         </h1>
         <div className="img&desc">
