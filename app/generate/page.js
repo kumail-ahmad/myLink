@@ -64,11 +64,11 @@ const Generate = () => {
 
   return (
     <div className="bg-[#eac1ea] min-h-screen grid grid-cols-2">
-      <div className="div.picture mt-10 ml-44">
+      <div className="div.picture mt-8 ml-44 md:block hidden">
         <Image alt="image" src="/generate.png" width={320} height={320} />
       </div>
 
-      <div className="inputs flex flex-col justify-center gap-4  mt-28">
+      <div className="inputs flex flex-col justify-center gap-4 mt-16 md:mt-28">
         <p className="font-poppins font-semibold text-2xl">Create your link</p>
 
         <h1 className="font-semibold">Step 1: Name your Handle</h1>
