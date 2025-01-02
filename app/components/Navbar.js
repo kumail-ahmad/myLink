@@ -10,8 +10,8 @@ const Navbar = () => {
     <>
       {showNavbar && (
         <div className="container">
-          <nav className="bg-white w-[80vw] flex justify-between fixed top-2 md:top-10 right-[10vw] rounded-full  md:p-5 md:px-7 ">
-            <div className="logo&clickables flex items-center gap-3">
+          <nav className="bg-white md:w-[80vw] w-[85vw] flex justify-between fixed top-2 md:top-10 right-[10vw] rounded-full  px-1 p-2 md:p-5 md:px-7 ">
+            <div className="logo&clickables flex items-center md:gap-3">
               <div className="svg mx-2 flex items-center ">
                 <Link href="/">
                   {" "}
@@ -39,8 +39,8 @@ const Navbar = () => {
                   <Link href="withphoto">
                     <li className="hover:bg-gray-300 p-2 rounded">slug</li>
                   </Link>
-                  <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
-                  <li className="hover:bg-gray-300 p-2 rounded">Templates</li>
+                  <li className="hover:bg-gray-300 p-2 rounded md:block hidden">Templates</li>
+                  <li className="hover:bg-gray-300 p-2 rounded md:block hidden">Templates</li>
                 </ul>
               </div>
             </div>
