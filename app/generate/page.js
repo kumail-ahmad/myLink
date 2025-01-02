@@ -71,9 +71,9 @@ const Generate = () => {
       <div className="inputs flex flex-col justify-center gap-4 mt-16 md:mt-28">
         <p className="font-poppins font-semibold text-2xl">Create your link</p>
 
-        <h1 className="font-semibold">Step 1: Name your Handle</h1>
+        <h1 className="font-semibold w-60">Step 1: Name your Handle</h1>
         <input
-          className="border border-purple-400 rounded-full p-2 w-1/3 ml-4"
+          className="border border-purple-400 rounded-full p-2 md:w-1/3 ml-4"
           type="text"
           placeholder="Enter your handle"
           onChange={(e) => setHandle(e.target.value)}
@@ -84,14 +84,14 @@ const Generate = () => {
         {links.map((item, index) => (
           <div key={index} className="addlinks  ml-4">
             <input
-              className="border border-purple-400 rounded-full p-2 w-1/3 mr-2"
+              className="border border-purple-400 rounded-full p-2 md:w-1/3 mr-2"
               type="text"
               placeholder="Enter Link text"
               onChange={(e) => handleChange(index, "linktext", e.target.value)}
               value={item.linktext}
             />
             <input
-              className="border border-purple-400 rounded-full p-2 w-1/3"
+              className="border border-purple-400 rounded-full p-2 md:w-1/3"
               type="text"
               placeholder="Enter Link URL"
               onChange={(e) => handleChange(index, "link", e.target.value)}
@@ -101,25 +101,25 @@ const Generate = () => {
         ))}
 
         <button
-          className="bg-purple-500 hover:bg-purple-600 text-white w-1/3 font-bold py-2 px-4 rounded-full ml-4"
+          className="bg-purple-500 hover:bg-purple-600 text-white md:w-1/3 font-bold py-2 px-4 rounded-full ml-4"
           onClick={addLink}
         >
           +Add Link
         </button>
 
-        <h1 className="font-semibold">
+        <h1 className="font-semibold w-60">
           Step 3: Add Your Display Picture and Description
         </h1>
         <div className="img&desc">
           <input
-            className="border border-purple-400 rounded-full p-2 ml-4 w-1/3"
+            className="border border-purple-400 rounded-full p-2 ml-4 md:w-1/3"
             type="text"
             placeholder="Enter image URL"
             onChange={(e) => setPic(e.target.value)}
             value={pic}
           />
           <input
-            className="border border-purple-400 rounded-full p-2 ml-4 w-1/3"
+            className="border border-purple-400 rounded-full p-2 ml-4 md:w-1/3"
             type="text"
             placeholder="Enter description"
             onChange={(e) => setDesc(e.target.value)}
@@ -128,7 +128,7 @@ const Generate = () => {
         </div>
         <button
           disabled={pic === "" || handle === ""}
-          className="disabled:bg-purple-400 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 w-1/3"
+          className="disabled:bg-purple-400 bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 px-5 rounded-full ml-4 md:w-1/3"
           onClick={submitLinks}
         >
           Submit
