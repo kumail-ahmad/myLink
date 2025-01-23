@@ -35,17 +35,17 @@ export default function Page() {
         <div className="links">
           {item.links.map((item, index) => (
             <div key={index} className="container">
-              <Link href={item.link1}>
+              <Link href={item.link1} target="_blank">
                 <div className="py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
                   {item.linktext1}
                 </div>
               </Link>
-              <Link href={item.link2}>
+              <Link href={item.link2} target="_blank">
                 <div className="py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
                   {item.linktext2}
                 </div>
               </Link>
-              <Link href={item.link3}>
+              <Link href={item.link3} target="_blank">
                 <div className="py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
                   {item.linktext3}
                 </div>
