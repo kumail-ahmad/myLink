@@ -14,6 +14,8 @@ export default function Page() {
         linktext2: "LinkedIn",
         link3: "https://vercel.com/kumail-ahmads-projects",
         linktext3: "Vercel",
+        link4: "https://read.cv/kumailahmad",
+        linktext4: "Read CV",
       },
     ],
     handle: "kumail-ahmad",
@@ -46,6 +48,11 @@ export default function Page() {
               <Link href={item.link3}>
                 <div className="py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
                   {item.linktext3}
+                </div>
+              </Link>
+              <Link href={item.link4} target="_blank">
+                <div className="py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
+                  {item.linktext4}
                 </div>
               </Link>
             </div>
