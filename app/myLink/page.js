@@ -36,7 +36,7 @@ export default function Page() {
           {item.links.map((item, index) => (
             <div key={index} className="container">
               <Link href={item.link1} target="_blank">
-                <div className="py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
+                <div className=" py-4 px-2 min-w-96 bg-white my-3 shadow-lg text-center rounded-full">
                   {item.linktext1}
                 </div>
               </Link>
