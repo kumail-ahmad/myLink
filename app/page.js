@@ -8,7 +8,6 @@ export default function Home() {
   const [text, setText] = useState("");
   const router = useRouter();
 
-
   const createTree = () => {
     router.push(`/generate?handle=${text}`);
   };
@@ -22,7 +21,7 @@ export default function Home() {
               Everything you are. In one{" "}
             </p>
             <p className="text-[#def056] font-bold text-4xl md:text-5xl">
-               simple link in bio,
+              simple link in bio,
             </p>
             <p className="text-[#def056] font-bold text-4xl md:text-5xl"> </p>
             <p className="text-[#def056] md:text-lg mt-4 ">
@@ -58,10 +57,43 @@ export default function Home() {
           ></Image>
         </div>
       </section>
-      <section className="bg-[#e9c0e9] min-h-[100vh] grid grid-cols-2 items-center justify-center">
-        <div>--Content--</div>
-        <div>--Content--</div>
-      
+      <section className="bg-[#e9c0e9] min-h-[100vh] grid grid-cols-2">
+        <div className="photo mt-28 hidden md:block ">
+          <Image
+            alt="no image"
+            width={522}
+            height={482}
+            src="/clothes.png"
+            className="w-full md:w-auto "
+          ></Image>
+        </div>
+        <div className="text&all mt-28 md:mt-40 ml-10 md:ml-0 w-full ">
+          <div className="heading w-full">
+            <p className="text-[#502274] font-extrabold text-3xl md:text-[54px] ">
+              Create and customize
+            </p>
+            <p className="text-[#502274] font-extrabold text-3xl md:text-5xl">
+              {" "}
+              your palmLink in
+            </p>
+
+            <p className="text-[#502274] font-extrabold text-3xl md:text-5xl font-poppins">
+              minutes
+            </p>
+          </div>
+          <div className="maintext mt-4">
+            <p className="text-[#502274] ">
+              Connect your TikTok, Instagram, Twitter, website, store, videos,
+              music, podcast, events and more. It all comes together in a link
+              in bio landing page designed to convert.
+            </p>
+          </div>
+          <div className="btn mt-11">
+            <button className=" rounded-full bg-[#502274] p-5 w-48 text-white">
+              Get started for free
+            </button>
+          </div>
+        </div>
       </section>
     </main>
   );
