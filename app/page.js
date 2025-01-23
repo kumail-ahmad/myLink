@@ -94,7 +94,8 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section><section className="bg-[#780016] min-h-[100vh] grid grid-cols-2">
+      </section>
+      <section className="bg-[#780016] min-h-[100vh] grid grid-cols-2">
         <div className="container mt-36 ml-14 w-full">
           <div className="text&all">
             <p className="text text-3xl md:text-6xl text-[#E9C0E9] font-extrabold font-sans">
@@ -135,6 +136,37 @@ export default function Home() {
           ></Image>
         </div>
       </section>
+      <section className="min-h-[100vh] bg-[#f3f3f1] grid grid-cols-2 font-poppins">
+        <div className="photo md:block hidden mt-32 ml-28">
+          <Image src="/4th.png" alt="" width={422} height={482}></Image>
+        </div>
+        <div className="text">
+          <div className="heading mt-36 ml-14 w-full">
+            <p className="text-[#1e2330] text-2xl md:text-5xl font-extrabold ">
+              Analyze your audience
+            </p>
+            <p className="text-[#1e2330]  text-2xl md:text-5xl font-extrabold ">
+              and keep your followers
+            </p>
+            <p className="text-[#1e2330]  text-2xl md:text-5xl font-extrabold ">
+              engaged
+            </p>
+          </div>
+          <div className="maintext mt-12 ml-14">
+            <p className="text-black  text-sm  md:text-lg md:w-full w-40">
+              Track your engagement over time, monitor revenue and learn what’s
+              converting your audience. Make informed updates on the fly to keep
+              them coming back.
+            </p>
+          </div>
+          <div className="btn mt-10 ml-11 w-full">
+            <button className="bg-[#E9C0E9] p-4 text-black rounded-full  ">
+              Get started for free
+            </button>
+          </div>
+        </div>
+      </section>
+      
     </main>
   );
 }
